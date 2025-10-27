@@ -596,139 +596,6 @@
             color: var(--text-light);
         }
 
-        .skills {
-            background: var(--bg-color);
-            min-height: auto;
-            padding-bottom: 7rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skills::before {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: var(--primary-light);
-            filter: blur(120px);
-            opacity: 0.1;
-            top: 20%;
-            left: 5%;
-        }
-
-        .skills .skills-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5rem;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .skills-row .skills-column {
-            flex: 1 1 40rem;
-            max-width: 60rem;
-        }
-
-        .skills-column .title {
-            font-size: 2.8rem;
-            margin: 0 0 1.5rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .skills-box .skills-content {
-            position: relative;
-            border-radius: 1rem;
-            padding: 2rem;
-            z-index: 1;
-            overflow: hidden;
-            background: var(--card-bg);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-        }
-
-        .skills-box .skills-content:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .skills-content .progress {
-            padding: 1.5rem 0;
-        }
-
-        .skills-content .progress h3 {
-            font-size: 1.8rem;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .skills-content .progress h3 span {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .skills-content .progress .bar {
-            height: 1rem;
-            border-radius: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.2rem;
-            margin: 1rem 0;
-            overflow: hidden;
-        }
-
-        .skills-content .progress .bar span {
-            display: block;
-            height: 100%;
-            border-radius: 0.8rem;
-            background: var(--gradient);
-            position: relative;
-            overflow: hidden;
-            transition: width 1.5s ease-in-out;
-        }
-
-        .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-            width: 85%;
-        }
-
-        .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-            width: 85%;
-        }
-
-        .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-            width: 80%;
-        }
-
-        .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-            width: 75%;
-        }
-
-        .skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
-            width: 75%;
-        }
-
-        .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-            width: 90%;
-        }
-
-        .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-            width: 90%;
-        }
-
-        .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-            width: 85%;
-        }
-
-        .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-            width: 85%;
-        }
-
-        .skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
-            width: 75%;
-        }
-
         .tech-stack {
             min-height: auto;
             padding-bottom: 7rem;
@@ -1236,8 +1103,7 @@
                 padding: 2rem 3%;
             }
 
-            .education,
-            .skills {
+            .education {
                 padding-bottom: 7rem;
             }
         }
@@ -1382,26 +1248,6 @@
 
             .education-column .title {
                 margin: 0 0 1.5rem 1rem;
-            }
-
-            /* Skills Section */
-            .skills {
-                padding: 8rem 2rem 2rem;
-            }
-
-            .skills .skills-row {
-                flex-direction: column;
-                padding: 0 1rem;
-            }
-
-            .skills-content .progress h3 {
-                font-size: 1.7rem;
-                padding: 0 0.5rem;
-            }
-
-            .skills-content .progress p {
-                text-align: justify;
-                padding: 0 0.5rem;
             }
 
             /* Tech Stack Section */
@@ -1689,7 +1535,6 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
             <a href="#tech-stack">Tech Stack</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -1806,66 +1651,6 @@
                             <p>Gained hands-on experience in front-end development using HTML, CSS, JavaScript, along
                                 with frameworks like Bootstrap and Tailwind CSS. Also worked on backend development
                                 using FastAPI, PostgreSQL, and SQLAlchemy.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-        <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">Technical Skills</h3>
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>Python <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>FastAPI <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>PostgreSQL <span>80%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>HTML/CSS/JavaScript <span>75%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>Angular <span>75%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skills-column">
-                <h3 class="title">Professional Skills</h3>
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>Backend Development <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>Problem Solving <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>Teamwork <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>Critical Thinking <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>AI/ML Development <span>75%</span></h3>
-                            <div class="bar"><span></span></div>
                         </div>
                     </div>
                 </div>
@@ -2172,7 +1957,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('section, .about-container, .education-column, .skills-column, .tech-category, .projects-box').forEach(el => {
+        document.querySelectorAll('section, .about-container, .education-column, .tech-category, .projects-box').forEach(el => {
             el.classList.add('animate-on-scroll');
             observer.observe(el);
         });
